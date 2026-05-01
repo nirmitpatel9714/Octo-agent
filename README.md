@@ -20,15 +20,14 @@ cd Octo-agent
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the onboarding wizard
-python main.py onboard
+# Run the install wizard
+./install.bat for windows and ./install for linux/mac
 ```
 
 ### Launching the Agent
 ```bash
-python main.py
+octo
 ```
-
 ---
 
 ## ✨ Key Capabilities
