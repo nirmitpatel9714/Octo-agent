@@ -1,61 +1,95 @@
-# 🐙 Octo Agent Terminal UI
+# 🐙 Octo Agent: The Self-Evolving Terminal Assistant
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![OpenRouter](https://img.shields.io/badge/AI-OpenRouter-orange.svg)](https://openrouter.ai/)
 
-**Octo Agent** is a powerful, terminal-first AI assistant powered by OpenRouter. It features an advanced modular skill system, persistent memory, and multi-agent orchestration capabilities.
+**Octo Agent** is a state-of-the-art, terminal-first AI assistant designed for high-performance engineering and autonomous task execution. Powered by OpenRouter, it combines a modular skill architecture with persistent memory and multi-agent orchestration to provide a truly agentic command-line experience.
 
 ---
 
-## ✨ Features
+## 🚀 Quick Start
 
-- 🖥️ **Cross-Platform**: Works seamlessly on Windows, Linux, and macOS.
-- 🧠 **OpenRouter Integration**: Access 100+ AI models with ease.
-- 🛠️ **Advanced Skill System**: 
-  - **Recursive Skills**: Supports nested modular skills (e.g., `github-pr`, `web-dev-react`).
-  - **Auto-Discovery**: Agent can discover and use its own skills dynamically.
-  - **Easy Creation**: Create new skills on the fly with the `/skills` system.
-- 💾 **Persistent Memory**: Retains context across sessions via `memory.md`.
-- 🤖 **Multi-Agent Orchestration**: Run pipelines or debates between specialized sub-agents.
-- 🧹 **Clean Terminal UI**: Modern, aesthetic interface with command history and tab completion.
+### Installation
 
-## 🚀 Installation
+```bash
+# Clone the repository
+git clone https://github.com/nirmitpatel9714/Octo-agent.git
+cd Octo-agent
 
-1. **Prerequisites**: Ensure you have **Python 3.10** or higher.
-2. **Install Dependencies**:
-   ```bash
-   python -m pip install -r requirements.txt
-   ```
-3. **Setup**: Run the onboarding wizard:
-   ```bash
-   python main.py onboard
-   ```
+# Install dependencies
+pip install -r requirements.txt
 
-## 💻 Usage
+# Run the onboarding wizard
+python main.py onboard
+```
 
-Start the agent:
+### Launching the Agent
 ```bash
 python main.py
 ```
 
-## ⌨️ Essential Commands
+---
 
-- `/help` — 📖 Show available commands
-- `/skills` — 🛠️ Search and manage modular skills (e.g., `/skills search github`)
-- `/memory` — 🧠 Display the agent's long-term memory
-- `/agent` — 🤖 Invoke a specialized sub-agent
-- `/mpc` — 🔀 Run multi-agent pipelines or debates
-- `/clear` — 🧹 Clear the terminal screen
-- `/reload` — 🔄 Refresh configuration and skills
-- `/exit` — 🚪 Close the application
+## ✨ Key Capabilities
 
-## 📂 Project Structure
+### 🧠 Advanced Memory Management
+Octo Agent doesn't just chat; it remembers. Using a persistent `memory.md` file, the agent tracks your preferences, project conventions, and past decisions across sessions. Use `/memory` to view current state or `/compact` to summarize history when context runs low.
 
-- `agents/`: Definitions for specialized sub-agents.
-- `skills/`: Modular prompt-based skills (includes 100+ Hermes Agent skills).
-- `soul.md`: Core personality and behavior guidelines.
-- `agent.md`: Technical instructions and metadata.
-- `memory.md`: Persistent knowledge storage.
+### 🛠️ Modular Skill System
+The agent features a robust `/skills` system. 
+- **Core Skills**: 15+ highly optimized prompts for debugging, refactoring, security auditing, and more (located in `skills/*.md`).
+- **Hermes Library**: Integrated with 80+ specialized skills from the Hermes Agent ecosystem.
+- **On-the-fly Creation**: Use the `create_skill` tool to build new slash commands dynamically during your conversation.
+
+### 🤖 Multi-Agent Orchestration (MPC)
+Run complex workflows by orchestrating multiple specialized sub-agents.
+- **Pipelines**: Chain agents together (e.g., `Coder -> Reviewer -> Tester`).
+- **Debates**: Have two agents argue over a technical decision to find the optimal solution.
+- **Delegation**: Sprout independent sub-agents for focused tasks without cluttering your main history.
+
+### 🌐 Real-world Integration
+- **Web Browsing**: Fetch and summarize documentation or API references on the fly.
+- **MCP Support**: Connect to Model Context Protocol servers for extended toolsets.
+- **Filesystem Mastery**: Surgical code edits, recursive directory analysis, and smart file searching.
 
 ---
-*Octo Agent: The terminal assistant that grows with you.*
+
+## ⌨️ Command Reference
+
+| Command | Description |
+| :--- | :--- |
+| `/help` | 📖 Display the command directory |
+| `/skills [query]` | 🛠️ Search and manage modular skills |
+| `/agent [name] [task]` | 🤖 Invoke a specialized sub-agent |
+| `/mpc pipeline [A,B] : [task]` | 🔀 Execute a multi-agent pipeline |
+| `/memory` | 🧠 View the agent's long-term memory |
+| `/compact` | 📉 Compress history into a dense context summary |
+| `/doctor` | 🏥 Diagnose environment and configuration health |
+| `/reload` | 🔄 Hot-reload soul, agent, and memory definitions |
+| `/exit` | 🚪 Securely close the session |
+
+---
+
+## 📂 Architecture Overview
+
+- **`app/`**: The engine room. Contains the CLI logic, tool registry, and agent state management.
+- **`agents/`**: Markdown-based definitions for specialized personas (e.g., `Reviewer`, `SecurityExpert`).
+- **`skills/`**: The modular brain. Prompt templates that define how the agent handles specific /slash commands.
+- **`soul.md`**: The agent's core personality and behavioral guidelines.
+- **`agent.md`**: Technical constraints and operational metadata.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Whether it's adding new skills, improving the core engine, or fixing bugs:
+1. Fork the repo.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
+
+---
+
+*Built with ❤️ for the terminal-obsessed engineer.*
