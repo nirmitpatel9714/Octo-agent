@@ -1,0 +1,882 @@
+[
+  {
+    "timestamp": "2026-04-29T00:56:54.859008+00:00",
+    "uptime_seconds": 0.1,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 43.4,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 83.0
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 32.5,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T00:57:26.243716+00:00",
+    "uptime_seconds": 31.4,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 14.5,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 86.7
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 72.8,
+      "threads": 10
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T00:57:57.520964+00:00",
+    "uptime_seconds": 62.7,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 26.8,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 87.3
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 74.1,
+      "threads": 7
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T00:58:28.831086+00:00",
+    "uptime_seconds": 94.0,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 19.2,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 85.5
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 74.3,
+      "threads": 7
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T00:59:00.085051+00:00",
+    "uptime_seconds": 125.3,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 36.5,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 85.1
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 74.7,
+      "threads": 6
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T00:59:31.355744+00:00",
+    "uptime_seconds": 156.5,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 21.6,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 86.1
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 74.8,
+      "threads": 4
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:00:02.496643+00:00",
+    "uptime_seconds": 187.7,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 37.8,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 85.0
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 74.8,
+      "threads": 4
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:00:33.710088+00:00",
+    "uptime_seconds": 218.9,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 26.5,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 85.2
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 74.9,
+      "threads": 4
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:01:04.859252+00:00",
+    "uptime_seconds": 250.1,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 5.5,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 85.4
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 74.9,
+      "threads": 4
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:01:36.054813+00:00",
+    "uptime_seconds": 281.2,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 13.2,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 85.2
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 74.5,
+      "threads": 4
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:02:07.241986+00:00",
+    "uptime_seconds": 312.4,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 98.3,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 90.8
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 55.9,
+      "threads": 8
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:02:39.330309+00:00",
+    "uptime_seconds": 344.5,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 62.5,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 92.8
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 56.7,
+      "threads": 8
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:03:11.313316+00:00",
+    "uptime_seconds": 376.5,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 22.9,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 88.9
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 48.2,
+      "threads": 8
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:03:42.657471+00:00",
+    "uptime_seconds": 407.8,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 18.8,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 84.2
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 48.6,
+      "threads": 6
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:04:13.293583+00:00",
+    "uptime_seconds": 438.5,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 14.3,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 83.1
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 48.9,
+      "threads": 6
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:04:43.880160+00:00",
+    "uptime_seconds": 469.1,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 2.0,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 82.5
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 49.4,
+      "threads": 6
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:05:14.391089+00:00",
+    "uptime_seconds": 499.6,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 34.1,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 85.7
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 49.7,
+      "threads": 6
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T01:05:45.491187+00:00",
+    "uptime_seconds": 530.7,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 25.9,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 84.5
+    },
+    "process": {
+      "pid": 1840,
+      "memory_mb": 49.7,
+      "threads": 6
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:44:29.778998+00:00",
+    "uptime_seconds": 0.1,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 34.5,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 88.0
+    },
+    "process": {
+      "pid": 12560,
+      "memory_mb": 32.4,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:45:00.703146+00:00",
+    "uptime_seconds": 31.0,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 45.6,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 93.6
+    },
+    "process": {
+      "pid": 12560,
+      "memory_mb": 71.6,
+      "threads": 12
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:45:31.471090+00:00",
+    "uptime_seconds": 61.8,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 26.8,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 87.7
+    },
+    "process": {
+      "pid": 12560,
+      "memory_mb": 73.6,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:47:41.716568+00:00",
+    "uptime_seconds": 0.0,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 20.4,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 83.4
+    },
+    "process": {
+      "pid": 4308,
+      "memory_mb": 37.2,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:48:12.867226+00:00",
+    "uptime_seconds": 31.2,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 25.0,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 88.2
+    },
+    "process": {
+      "pid": 4308,
+      "memory_mb": 72.7,
+      "threads": 12
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:48:43.928272+00:00",
+    "uptime_seconds": 62.3,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 56.2,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 87.7
+    },
+    "process": {
+      "pid": 4308,
+      "memory_mb": 73.8,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:49:50.645090+00:00",
+    "uptime_seconds": 0.0,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 27.1,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 84.5
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 31.2,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:50:21.491571+00:00",
+    "uptime_seconds": 30.9,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 10.2,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 87.9
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 72.3,
+      "threads": 12
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:50:54.409064+00:00",
+    "uptime_seconds": 63.8,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 10.9,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 86.3
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 72.7,
+      "threads": 10
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:51:24.906983+00:00",
+    "uptime_seconds": 94.3,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 22.8,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 87.1
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 73.9,
+      "threads": 10
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:51:55.439822+00:00",
+    "uptime_seconds": 124.8,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 19.3,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 84.8
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 74.4,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:52:25.898129+00:00",
+    "uptime_seconds": 155.3,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 0.0,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 81.9
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 74.5,
+      "threads": 7
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:52:56.366093+00:00",
+    "uptime_seconds": 185.8,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 2.1,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 86.0
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 74.7,
+      "threads": 7
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:53:26.822168+00:00",
+    "uptime_seconds": 216.2,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 18.8,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 86.1
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 74.8,
+      "threads": 7
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:53:57.241710+00:00",
+    "uptime_seconds": 246.6,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 4.1,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 84.8
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 75.0,
+      "threads": 7
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:54:27.672447+00:00",
+    "uptime_seconds": 277.1,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 10.0,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 84.4
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 75.1,
+      "threads": 7
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:54:58.141825+00:00",
+    "uptime_seconds": 307.5,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 7.5,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 84.7
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 75.2,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:55:28.652637+00:00",
+    "uptime_seconds": 338.1,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 2.0,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 86.4
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 75.2,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:55:59.442399+00:00",
+    "uptime_seconds": 368.8,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 14.9,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 87.6
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 75.2,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:56:29.909192+00:00",
+    "uptime_seconds": 399.3,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 17.9,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 91.7
+    },
+    "process": {
+      "pid": 27580,
+      "memory_mb": 48.6,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:58:41.727769+00:00",
+    "uptime_seconds": 0.1,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 25.5,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 88.1
+    },
+    "process": {
+      "pid": 5592,
+      "memory_mb": 29.5,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:59:12.870539+00:00",
+    "uptime_seconds": 31.2,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 100.0,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 89.5
+    },
+    "process": {
+      "pid": 5592,
+      "memory_mb": 72.0,
+      "threads": 12
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T21:59:43.833544+00:00",
+    "uptime_seconds": 62.2,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 45.8,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 90.9
+    },
+    "process": {
+      "pid": 5592,
+      "memory_mb": 73.2,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T22:00:14.662761+00:00",
+    "uptime_seconds": 93.0,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 18.0,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 85.6
+    },
+    "process": {
+      "pid": 5592,
+      "memory_mb": 73.5,
+      "threads": 9
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T22:00:45.147522+00:00",
+    "uptime_seconds": 123.5,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 14.6,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 85.5
+    },
+    "process": {
+      "pid": 5592,
+      "memory_mb": 73.7,
+      "threads": 8
+    },
+    "api_reachable": true
+  },
+  {
+    "timestamp": "2026-04-29T22:01:15.601312+00:00",
+    "uptime_seconds": 153.9,
+    "status": "healthy",
+    "api_key_configured": true,
+    "model": "gpt-4o-mini",
+    "system": {
+      "platform": "Windows",
+      "python": "3.14.4",
+      "cpu_percent": 100.0,
+      "memory_total_mb": 7931,
+      "memory_used_percent": 87.6
+    },
+    "process": {
+      "pid": 5592,
+      "memory_mb": 73.6,
+      "threads": 6
+    },
+    "api_reachable": true
+  }
+]

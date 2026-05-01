@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Octo Agent — AI Assistant Dashboard with Chat, Terminal, and System Monitoring"/>
+  <title>Octo Agent — Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="app-layout">
+
+  <!-- ═══ Sidebar ═══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">🐙</div>
+      <span class="sidebar-title">Octo</span>
+      <span class="sidebar-version">v2.0</span>
+    </div>
+
+    <!-- New Chat Button -->
+    <div class="sidebar-new-chat">
+      <button class="btn-new-chat" id="btn-new-chat" onclick="createNewChat()">
+        <span>＋</span> New Chat
+      </button>
+    </div>
+
+    <!-- Conversation List -->
+    <div class="sidebar-conversations" id="sidebar-conversations">
+      <div class="nav-section-label">Recent Chats</div>
+      <div id="conversation-list"></div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-label">Navigation</div>
+        <div class="nav-item active" data-panel="chat" id="nav-chat">
+          <span class="nav-icon">💬</span><span>Chat</span>
+        </div>
+        <div class="nav-item" data-panel="dashboard" id="nav-dashboard">
+          <span class="nav-icon">📊</span><span>Dashboard</span>
+        </div>
+        <div class="nav-item" data-panel="terminal" id="nav-terminal">
+          <span class="nav-icon">⌨️</span><span>Terminal</span>
+        </div>
+      </div>
+      <div class="nav-section">
+        <div class="nav-section-label">Systems</div>
+        <div class="nav-item" data-panel="cron" id="nav-cron">
+          <span class="nav-icon">⏰</span><span>Cron Jobs</span>
+          <span class="nav-badge" id="cron-badge">0</span>
+        </div>
+        <div class="nav-item" data-panel="heartbeat" id="nav-heartbeat">
+          <span class="nav-icon">💓</span><span>Heartbeats</span>
+        </div>
+        <div class="nav-item" data-panel="mcp" id="nav-mcp">
+          <span class="nav-icon">🔌</span><span>MCP Servers</span>
+        </div>
+        <div class="nav-item" data-panel="mpc" id="nav-mpc">
+          <span class="nav-icon">🤝</span><span>MPC Agents</span>
+        </div>
+      </div>
+      <div class="nav-section">
+        <div class="nav-section-label">Management</div>
+        <div class="nav-item" data-panel="settings" id="nav-settings">
+          <span class="nav-icon">⚙️</span><span>Settings</span>
+        </div>
+        <div class="nav-item" data-panel="agents" id="nav-agents">
+          <span class="nav-icon">🤖</span><span>Agents</span>
+        </div>
+        <div class="nav-item" data-panel="skills" id="nav-skills">
+          <span class="nav-icon">🛠</span><span>Skills</span>
+        </div>
+        <div class="nav-item" data-panel="files" id="nav-files">
+          <span class="nav-icon">📄</span><span>Files</span>
+        </div>
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-footer-row">
+        <div class="status-indicator">
+          <div class="status-dot" id="status-dot"></div>
+          <span id="status-text">Connecting...</span>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ═══ Main Content ═══ -->
+  <main class="main-content">
+
+    <!-- Header -->
+    <header class="main-header">
+      <div>
+        <div class="header-title" id="panel-title">Chat</div>
+        <div class="header-subtitle" id="panel-subtitle">Talk to Octo Agent</div>
+      </div>
+      <div class="header-actions">
+        <button class="header-btn" onclick="refreshStatus()">↻ Refresh</button>
+      </div>
+    </header>
+
+    <!-- ═══ Chat Panel ═══ -->
+    <div class="chat-panel active" id="panel-chat">
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-message assistant">
+          <div class="msg-avatar">🐙</div>
+          <div>
+            <div class="msg-bubble">
+              <p>Hello! I'm Octo, your AI assistant. How can I help you today?</p>
+            </div>
+            <div class="msg-time">Just now</div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <div class="chat-input-wrapper">
+          <textarea class="chat-input" id="chat-input"
+                    placeholder="Message Octo..." rows="1"
+                    onkeydown="handleChatKey(event)"></textarea>
+          <button class="chat-send-btn" id="chat-send" onclick="sendMessage()">➤</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ Terminal Panel ═══ -->
+    <div class="terminal-panel" id="panel-terminal">
+      <div class="terminal-output" id="terminal-output">
+        <div class="terminal-line system">🐙 Octo Terminal — Connected to workspace</div>
+        <div class="terminal-line system">Type commands below. Press Enter to execute.</div>
+      </div>
+      <div class="terminal-input-area">
+        <div class="terminal-input-wrapper">
+          <span class="terminal-prompt">$</span>
+          <input class="terminal-input" id="terminal-input"
+                 placeholder="Enter command..."
+                 onkeydown="handleTerminalKey(event)"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ Dashboard Panel ═══ -->
+    <div class="panel-container">
+      <div class="panel" id="panel-dashboard">
+        <div class="dashboard-grid" id="dashboard-stats"></div>
+        <div class="card">
+          <div class="card-title">📊 Recent Heartbeats</div>
+          <div class="hb-chart" id="mini-hb-chart"></div>
+        </div>
+        <div class="card">
+          <div class="card-title">📝 Recent Conversations</div>
+          <div id="recent-convos"></div>
+        </div>
+      </div>
+
+      <!-- ═══ Cron Panel ═══ -->
+      <div class="panel" id="panel-cron">
+        <div class="section-header">
+          <div class="section-title">⏰ Cron Jobs</div>
+          <button class="btn btn-primary" onclick="openCronModal()">+ Add Job</button>
+        </div>
+        <div id="cron-list"></div>
+      </div>
+
+      <!-- ═══ Heartbeat Panel ═══ -->
+      <div class="panel" id="panel-heartbeat">
+        <div class="section-header">
+          <div class="section-title">💓 Heartbeat Monitor</div>
+          <button class="btn btn-secondary" onclick="loadHeartbeats()">↻ Refresh</button>
+        </div>
+        <div class="dashboard-grid" id="hb-stats"></div>
+        <div class="card">
+          <div class="card-title">Heartbeat History</div>
+          <div class="hb-chart" id="hb-chart" style="height:120px"></div>
+        </div>
+        <div class="card">
+          <div class="card-title">Recent Snapshots</div>
+          <div id="hb-table-container"></div>
+        </div>
+      </div>
+
+      <!-- ═══ MCP Panel ═══ -->
+      <div class="panel" id="panel-mcp">
+        <div class="section-header">
+          <div class="section-title">🔌 MCP Servers</div>
+        </div>
+        <div id="mcp-list"></div>
+      </div>
+
+      <!-- ═══ MPC Panel ═══ -->
+      <div class="panel" id="panel-mpc">
+        <div class="section-header">
+          <div class="section-title">🤝 Multi-Party Chat</div>
+        </div>
+        <div class="card" id="mpc-agents-card">
+          <div class="card-title">Available Agents</div>
+          <div id="mpc-agents-list"></div>
+        </div>
+        <div class="card">
+          <div class="card-title">Run Pipeline</div>
+          <div class="form-group">
+            <label class="form-label">Agents (comma-separated)</label>
+            <input class="form-input" id="mpc-pipeline-agents" placeholder="coder, reviewer"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Task</label>
+            <textarea class="form-textarea" id="mpc-pipeline-task" placeholder="Describe the task..."></textarea>
+          </div>
+          <button class="btn btn-primary" onclick="runPipeline()">▶ Run Pipeline</button>
+          <button class="btn btn-secondary" onclick="runDebate()" style="margin-left:8px">🗣 Run Debate</button>
+        </div>
+        <div class="card" id="mpc-results-card" style="display:none">
+          <div class="card-title">Results</div>
+          <div id="mpc-results"></div>
+        </div>
+      </div>
+
+      <!-- ═══ Settings Panel ═══ -->
+      <div class="panel" id="panel-settings">
+        <div class="section-header">
+          <div class="section-title">⚙️ Settings</div>
+          <button class="btn btn-primary" onclick="saveSettings()">Save Settings</button>
+        </div>
+        <div class="card">
+          <div class="card-title">API Configuration</div>
+          <div class="form-group">
+            <label class="form-label">OpenRouter API Key</label>
+            <input type="password" class="form-input" id="setting-or-key" placeholder="sk-or-..."/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">OpenRouter Model</label>
+            <input class="form-input" id="setting-or-model" placeholder="gpt-4o-mini"/>
+          </div>
+          <div class="form-group" style="margin-top:24px">
+            <label class="form-label">OpenAI API Key (Fallback/Custom)</label>
+            <input type="password" class="form-input" id="setting-oa-key" placeholder="sk-..."/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">OpenAI Model</label>
+            <input class="form-input" id="setting-oa-model" placeholder="gpt-4o-mini"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ Agents Panel ═══ -->
+      <div class="panel" id="panel-agents">
+        <div class="section-header">
+          <div class="section-title">🤖 Agents</div>
+          <button class="btn btn-primary" onclick="openAgentModal()">+ New Agent</button>
+        </div>
+        <div id="agents-list"></div>
+      </div>
+
+      <!-- ═══ Skills Panel ═══ -->
+      <div class="panel" id="panel-skills">
+        <div class="section-header">
+          <div class="section-title">🛠 Skills</div>
+          <button class="btn btn-primary" onclick="openSkillModal()">+ New Skill</button>
+        </div>
+        <div id="skills-list"></div>
+      </div>
+
+      <!-- ═══ Files Panel ═══ -->
+      <div class="panel" id="panel-files">
+        <div class="section-header">
+          <div class="section-title">📄 System Files</div>
+        </div>
+        <div class="card">
+          <div class="dashboard-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="stat-card" style="cursor:pointer" onclick="openFileEditor('OCTO.md')">
+              <div class="stat-icon">🐙</div>
+              <div class="stat-value" style="font-size:18px">OCTO.md</div>
+              <div class="stat-sub">Project Conventions</div>
+            </div>
+            <div class="stat-card" style="cursor:pointer" onclick="openFileEditor('soul.md')">
+              <div class="stat-icon">👻</div>
+              <div class="stat-value" style="font-size:18px">soul.md</div>
+              <div class="stat-sub">Agent Personality</div>
+            </div>
+            <div class="stat-card" style="cursor:pointer" onclick="openFileEditor('memory.md')">
+              <div class="stat-icon">🧠</div>
+              <div class="stat-value" style="font-size:18px">memory.md</div>
+              <div class="stat-sub">Persistent Memory</div>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="file-editor-card" style="display:none">
+          <div class="section-header">
+            <div class="card-title" id="file-editor-title">Editing File</div>
+            <button class="btn btn-primary" onclick="saveFileEditor()">Save File</button>
+          </div>
+          <div class="form-group">
+            <textarea class="form-textarea" id="file-editor-content" style="height:400px; font-family:'Fira Code', monospace;"></textarea>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- ═══ Cron Modal ═══ -->
+<div class="modal-overlay" id="cron-modal">
+  <div class="modal">
+    <div class="modal-title">Add Cron Job</div>
+    <div class="form-group">
+      <label class="form-label">Name</label>
+      <input class="form-input" id="cron-name" placeholder="Daily summary"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Schedule</label>
+      <input class="form-input" id="cron-schedule" placeholder="every 5m, every 1h, every 1d"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Prompt</label>
+      <textarea class="form-textarea" id="cron-prompt" placeholder="What should Octo do?"></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeCronModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="addCronJob()">Create Job</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Agent Modal ═══ -->
+<div class="modal-overlay" id="agent-modal">
+  <div class="modal">
+    <div class="modal-title" id="agent-modal-title">New Agent</div>
+    <div class="form-group">
+      <label class="form-label">Name (e.g. coder, architect)</label>
+      <input class="form-input" id="agent-name" placeholder="coder"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">System Prompt</label>
+      <textarea class="form-textarea" id="agent-content" placeholder="You are an expert coder..." style="height:200px"></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeAgentModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveAgent()">Save Agent</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Skill Modal ═══ -->
+<div class="modal-overlay" id="skill-modal">
+  <div class="modal">
+    <div class="modal-title" id="skill-modal-title">New Skill</div>
+    <div class="form-group">
+      <label class="form-label">Name (command without slash)</label>
+      <input class="form-input" id="skill-name" placeholder="analyze"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Prompt Template</label>
+      <textarea class="form-textarea" id="skill-content" placeholder="Analyze the following file..." style="height:200px"></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeSkillModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveSkill()">Save Skill</button>
+    </div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

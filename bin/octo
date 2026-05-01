@@ -1,0 +1,2 @@
+#!/bin/bash
+"$HOME/octo/.venv/bin/python" "$HOME/octo/main.py" "$@"

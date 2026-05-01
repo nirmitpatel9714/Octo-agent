@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "example-server": {
+      "command": "python",
+      "args": ["main.py", "mcp-server"],
+      "env": {}
+    }
+  }
+}

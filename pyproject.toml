@@ -1,0 +1,15 @@
+[project]
+name = "octo-agent"
+version = "0.1.0"
+description = "Agentic Terminal AI Assistant"
+authors = ["Octo Agent"]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.dependencies]
+prompt_toolkit = ">=3.0"
+rich = ">=13.0"
+requests = ">=2.31"
+fastapi = ">=0.100.0"
+uvicorn = {version = ">=0.23.0", extras = ["standard"]}
+psutil = ">=5.9.0"
