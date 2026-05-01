@@ -248,7 +248,7 @@ def _run_onboarding(console: Console, env_file: Path) -> None:
 
 
 def main() -> None:
-    args = _parse_args()
+    args, unknown = _parse_args()
 
     root_path = Path(args.data_dir).expanduser().resolve()
     root_path.mkdir(parents=True, exist_ok=True)
@@ -259,7 +259,7 @@ def main() -> None:
 
     console = Console(theme=OCTO_THEME)
 
-    if getattr(args, "command", None) == "onboard":
+    if unknown and unknown[0] == "onboard" and len(unknown) == 1:
         _run_onboarding(console, env_file)
         return
 
@@ -281,14 +281,42 @@ def main() -> None:
     cwd = str(root_path)
 
     _print_welcome(console, model, root_path, state.session_id)
+    
+    initial_prompt = " ".join(unknown).strip() if unknown else ""
+    if initial_prompt:
+        console.print(f"[bold #9B6DFF] ❯[/] {initial_prompt}")
+        state.record_message("user", initial_prompt)
+        try:
+            run_agent_turn(
+                console=console,
+                state=state,
+                client=client,
+                registry=registry,
+                cwd=cwd,
+                term_width=_get_terminal_width(),
+            )
+        except KeyboardInterrupt:
+            console.print()
+            warn = Text()
+            warn.append("  ⚠ ", style="bold yellow")
+            warn.append("Interrupted.", style="yellow")
+            console.print(warn)
+            console.print()
+        except Exception as exc:
+            err = Text()
+            err.append("  ✗ ", style="bold red")
+            err.append("Error: ", style="bold red")
+            err.append(str(exc), style="red")
+            console.print(err)
+            console.print()
+
     _run_loop(console, state, client, skills, registry, cwd)
 
 
-def _parse_args() -> argparse.Namespace:
+def _parse_args() -> tuple[argparse.Namespace, list[str]]:
     parser = argparse.ArgumentParser(description="Octo Agent — Agentic Terminal Assistant 🐙")
-    parser.add_argument("command", nargs="?", default=None, help="Command to run (e.g. onboard)")
     parser.add_argument("--api-key", help="API key (OpenRouter, OpenAI, etc.)")
     parser.add_argument("--model", help="Model name")
     parser.add_argument("--endpoint", help="API base endpoint (any OpenAI-compatible)")
     parser.add_argument("--data-dir", default=".", help="Directory for config and state files")
-    return parser.parse_args()
+    return parser.parse_known_args()
